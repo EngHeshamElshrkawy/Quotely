@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Quotely</string>
+    <string name="database_name">quotes-database</string>
+    <string name="EMPTY_STRING" />
+    <string name="starting_color">#50d990</string>
+    <string name="ending_color">#3da2eb</string>
+    <string name="shared_prefrences_name">QuotelySharedPreferences</string>
+    <string name="shared_prefrences_key">hasData</string>
+    <string name="no_internet_text">No Internet Connection!</string>
+</resources>
