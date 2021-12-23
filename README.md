@@ -4,13 +4,14 @@
 
 <img src="/Assets/1.PNG" alt="Splash Screen" style="width:200px;height:360px;"/>
 
-![Quotes List](/Assets/2.PNG)
 
-![Search Dialog](/Assets/3.PNG)
+<img src="/Assets/2.PNG" alt="Quotes List" style="width:200px;height:360px;"/>
 
-![Searching By Quote](/Assets/4.PNG)
+<img src="/Assets/3.PNG" alt="Search Dialog" style="width:200px;height:360px;"/>
 
-![Searching By Author](/Assets/5.PNG)
+<img src="/Assets/4.PNG" alt="Searching By Quote" style="width:200px;height:360px;"/>
+
+<img src="/Assets/5.PNG" alt="Searching By Author" style="width:200px;height:360px;"/>
 
 # Table of Contents
 
