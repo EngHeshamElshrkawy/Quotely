@@ -2,7 +2,7 @@
 
 # Demo-Preview
 
-![Splash Screen](/Assets/1.PNG)
+<img src="/Assets/1.PNG" alt="Splash Screen" style="width:200px;height:360px;"/>
 
 ![Quotes List](/Assets/2.PNG)
 
