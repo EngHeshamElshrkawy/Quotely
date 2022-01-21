@@ -8,17 +8,20 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.captaindroid.tvg.Tvg;
 import com.example.quotely.R;
-import com.example.quotely.interfaces.AddingQuotesResponse;
-import com.example.quotely.interfaces.FetchingQuotesResponse;
+import com.example.quotely.interfaces.QuotesHandling;
+import com.example.quotely.models.Quote;
 import com.example.quotely.utils.AddQuotes;
 import com.example.quotely.utils.FetchQuotes;
 import com.example.quotely.utils.NetworkClient;
 
-public class Splash extends AppCompatActivity implements AddingQuotesResponse, FetchingQuotesResponse {
+import java.util.List;
+
+public class Splash extends AppCompatActivity implements QuotesHandling {
 
     SharedPreferences sharedPreferences;
     TextView textView;
@@ -67,6 +70,11 @@ public class Splash extends AppCompatActivity implements AddingQuotesResponse, F
     @Override
     public void addingFinished() {
         goToMain();
+    }
+
+    @Override
+    public void gettingFinished(List<Quote> quoteList) {
+        Log.v("SplashTag", "Interface called from Splash");
     }
 
     @Override

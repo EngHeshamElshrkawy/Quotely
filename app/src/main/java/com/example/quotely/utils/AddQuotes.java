@@ -4,10 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.quotely.R;
-import com.example.quotely.interfaces.AddingQuotesResponse;
+import com.example.quotely.interfaces.QuotesHandling;
 import com.example.quotely.models.Quote;
 
 import org.json.JSONArray;
@@ -20,7 +19,7 @@ public class AddQuotes extends AsyncTask<String, Void, Void> {
 
     private Context context;
     SharedPreferences sharedPreferences;
-    public AddingQuotesResponse delegate = null;
+    public QuotesHandling delegate = null;
 
     public AddQuotes(Context context){
         this.context = context;
@@ -34,7 +33,7 @@ public class AddQuotes extends AsyncTask<String, Void, Void> {
     protected Void doInBackground(String... strings) {
         try {
             JSONArray quotesArray = new JSONArray(strings[0]);
-            for(i = 0; i < 1000; i++){
+            for(i = 0; i < 5; i++){
                 JSONObject quoteObj = quotesArray.getJSONObject(i);
                 Quote quote = new Quote();
                 if(quoteObj.getString("author").equals("null")){
@@ -47,6 +46,10 @@ public class AddQuotes extends AsyncTask<String, Void, Void> {
                         .getAppDatabase()
                         .quoteDao()
                         .insert(quote);
+
+                PredictQuoteTopic predictQuoteTopic = new PredictQuoteTopic(context);
+                Log.v("PredictionLog", quote.text + " === " +predictQuoteTopic.getQuoteTopic(quote.text));
+
             }
 
         } catch (JSONException e) {

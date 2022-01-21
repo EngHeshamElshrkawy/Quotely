@@ -2,8 +2,8 @@ package com.example.quotely.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -11,15 +11,14 @@ import android.widget.ListView;
 import com.example.quotely.R;
 import com.example.quotely.fragments.SearchDialog;
 import com.example.quotely.adapters.QuoteAdapter;
-import com.example.quotely.interfaces.GettingQuotesResponse;
+import com.example.quotely.interfaces.QuotesHandling;
 import com.example.quotely.models.Quote;
-import com.example.quotely.utils.DatabaseClient;
 import com.example.quotely.utils.GetQuotes;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements SearchDialog.SearchDialogListener, GettingQuotesResponse {
+public class MainActivity extends AppCompatActivity implements SearchDialog.SearchDialogListener, QuotesHandling {
     List<Quote> quoteList;
     ListView listView;
     String query = "";
@@ -95,5 +94,15 @@ public class MainActivity extends AppCompatActivity implements SearchDialog.Sear
     public void gettingFinished(List<Quote> quoteList) {
         this.quoteList = quoteList;
         updateUI();
+    }
+
+    @Override
+    public void fetchingFinished(String response) {
+        Log.v("MainActivityTag", "Interface called from MainActivity");
+    }
+
+    @Override
+    public void addingFinished() {
+        Log.v("MainActivityTag", "Interface called from MainActivity");
     }
 }

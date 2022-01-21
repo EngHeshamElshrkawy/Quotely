@@ -1,0 +1,37 @@
+com/example/quotely/models/Quote.java
+ com.example.quotely.models.Quote
+com/example/quotely/interfaces/QuoteDao.java
+ com.example.quotely.interfaces.QuoteDao
+com/example/quotely/activities/MainActivity.java
+ com.example.quotely.activities.MainActivity
+com/example/quotely/fragments/SearchDialog.java
+ com.example.quotely.fragments.SearchDialog
+ com.example.quotely.fragments.SearchDialog$1
+ com.example.quotely.fragments.SearchDialog$2
+ com.example.quotely.fragments.SearchDialog$3
+ com.example.quotely.fragments.SearchDialog$SearchDialogListener
+com/example/quotely/utils/NetworkClient.java
+ com.example.quotely.utils.NetworkClient
+com/example/quotely/BuildConfig.java
+ com.example.quotely.BuildConfig
+com/example/quotely/utils/DatabaseClient.java
+ com.example.quotely.utils.DatabaseClient
+com/example/quotely/utils/FetchQuotes.java
+ com.example.quotely.utils.FetchQuotes
+ com.example.quotely.utils.FetchQuotes$1
+ com.example.quotely.utils.FetchQuotes$2
+com/example/quotely/adapters/QuoteAdapter.java
+ com.example.quotely.adapters.QuoteAdapter
+com/example/quotely/utils/GetQuotes.java
+ com.example.quotely.utils.GetQuotes
+com/example/quotely/interfaces/QuotesHandling.java
+ com.example.quotely.interfaces.QuotesHandling
+com/example/quotely/utils/AppDatabase.java
+ com.example.quotely.utils.AppDatabase
+com/example/quotely/utils/AddQuotes.java
+ com.example.quotely.utils.AddQuotes
+com/example/quotely/utils/PredictQuoteTopic.java
+ com.example.quotely.utils.PredictQuoteTopic
+com/example/quotely/activities/Splash.java
+ com.example.quotely.activities.Splash
+ com.example.quotely.activities.Splash$1
